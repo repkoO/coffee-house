@@ -20,6 +20,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #E1D4C9;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+:root {
+  --main-text-color: #403F3D;
+}
+
 @font-face {
   font-family: 'Inter';
   src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
@@ -29,4 +39,41 @@ html {
 
 /* HEADER */
 
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px 20px 40px;
+  justify-content: space-between;
+}
 
+.header__nav-ul__wrapper {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.header__nav-ul__wrapper a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.header__menu {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.header__menu a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
