@@ -262,3 +262,21 @@ gap: 40px;
 .about__items img {
   border-radius: 20px;
 }
+
+/* MOBILE APP */
+
+.mobile {
+  margin-top: 100px;
+}
+
+.mobile__container {
+  padding: 0 40px;
+  display: flex;
+  gap: 100px;
+}
+
+.mobile__title {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
