@@ -316,3 +316,91 @@ gap: 40px;
   border: 1px solid #665F55;
   background-color: transparent;
 }
+
+/* FOOTER */
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.footer__container {
+  margin: 0 40px;
+  border-radius: 40px;
+  background: #665F55;
+}
+
+.footer__contacts {
+  display: flex;
+  padding: 100px;
+  gap: 135px;
+}
+
+.heading__slogan {
+  color: #E1D4C9;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 75px */
+}
+
+.heading__slogan-2 {
+  color: #B0907A;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Inter';
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+.footer__links  button {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+  background: transparent;
+  margin-right: 8px;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-top: 32px;
+}
+
+.footer__contact-title h3 {
+  color: #E1D4C9;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 30px */
+}
+
+.footer__contact-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.footer__contact-links span {
+  color: #E1D4C9;
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Action/link & button */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+
+.footer__contact-links img {
+  padding-right: 6px;
+}
