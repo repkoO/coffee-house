@@ -32,7 +32,7 @@ body {
 
 @font-face {
   font-family: 'Inter';
-  src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 /* FIX */
@@ -42,7 +42,7 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px 0 40px;
   justify-content: space-between;
 }
 
@@ -76,6 +76,105 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+}
+
+/* MENU-CONTAINER */
+
+.menu {
+  margin-top: 20px;
+}
+
+.menu__container {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu__container h2 {
+  color: var(--main-text-color);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Heading/heading-2 */
+  font-family: 'Inter';
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 75px */
+}
+
+.menu__container-buttons button {
+  padding: 8px 16px 8px 8px;
+  gap: 8px;
+  border-radius: 100px;
+  background: transparent;
+}
+
+.menu__container-buttons span {
+  color: var(--main-text-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Action/link & button */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+
+/* ITEMS */
+
+.menu__items {
+  margin-top: 40px;
+}
+
+.menus__container {
+  display: grid;
+  margin-left: 40px;
+  grid-template-columns: 310px 310px 310px 310px;
+  gap: 40px;
+}
+
+.menu__item {
+display: flex;
+flex-direction: column;
+border: 1px solid #C1B6AD;
+border-radius: 40px;
+}
+
+.menu__item img {
+  border-radius: 40px;
+}
+
+.menu__item-inf h3 {
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Heading/heading-3 */
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 30px */
+}
+
+.menu__item-inf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 18px 20px 20px 20px;
+  flex: 1 0 0;
+}
+
+.menu__item-inf p {
+  color: #403F3D;
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Body/medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
 
 /* FOOTER */
