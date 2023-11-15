@@ -279,4 +279,40 @@ gap: 40px;
   display: flex;
   flex-direction: column;
   align-self: center;
+  row-gap: 40px;
+}
+
+.mobile__title h2 {
+  color: var(--main-text-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'Inter';
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.mobile__title p {
+  color: var(--main-text-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.mobile__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile__buttons button {
+  display: flex;
+  width: 200px;
+  padding: 12px 20px;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #665F55;
+  background-color: transparent;
 }
