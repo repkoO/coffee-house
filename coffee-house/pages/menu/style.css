@@ -26,6 +26,7 @@ body {
   margin: 0 auto;
 }
 
+
 :root {
   --main-text-color: #403F3D;
 }
@@ -76,6 +77,8 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 /* MENU-CONTAINER */

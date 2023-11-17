@@ -26,13 +26,18 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   --main-text-color: #403F3D;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 /* FIX */
@@ -62,12 +67,6 @@ body {
   line-height: 150%;
 }
 
-.header__menu {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
 .header__menu a {
   text-decoration: none;
   color: var(--main-text-color);
@@ -76,6 +75,7 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+  cursor: pointer;
 }
 
 /* CONTAINER */
