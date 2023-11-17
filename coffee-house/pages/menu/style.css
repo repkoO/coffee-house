@@ -81,6 +81,29 @@ body {
   cursor: pointer;
 }
 
+.hover-animation {
+  position: relative;
+  color: var(--main-text-color);
+}
+
+.hover-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -20%;
+  left: 0;
+  transform: scaleX(0);
+  background-color: var(--main-text-color);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.hover-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
 /* MENU-CONTAINER */
 
 .menu {
