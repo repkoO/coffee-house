@@ -202,6 +202,10 @@ a {
   line-height: 150%; /* 24px */
 }
 
+.menu__container-buttons-coffee span {
+color: #E1D4C9;
+}
+
 .main__style:hover {
   background-color: #665F55;
   transition: ease 0.5s;
@@ -245,14 +249,10 @@ background-color: #E1D4C9;
 }
 
 .menu__item {
-display: flex;
-flex-direction: column;
-border: 1px solid #C1B6AD;
-border-radius: 40px;
-}
-
-.menu__item:hover {
-  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #C1B6AD;
+  border-radius: 40px;
 }
 
 .menu__item img {

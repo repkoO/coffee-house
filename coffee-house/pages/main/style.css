@@ -338,7 +338,12 @@ grid-template-areas:
 }
 
 .item1 {
+  width: 100%;
+  height: 590px;
   grid-area: item1;
+  border-radius: 20px;
+  background: cover no-repeat;
+  overflow: hidden;
 }
 
 .item3 {
@@ -353,6 +358,11 @@ grid-template-areas:
 
 .about__items img {
   border-radius: 20px;
+}
+
+.about__items img:hover {
+  transition: ease 0.5s;
+  transform: scale(1);
 }
 
 /* MOBILE APP */
