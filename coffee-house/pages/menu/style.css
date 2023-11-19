@@ -336,6 +336,10 @@ border-radius: 40px;
   transition: ease 1s;
 }
 
+.footer__links  button:hover svg path {
+  
+}
+
 .footer__contact {
   display: flex;
   flex-direction: column;

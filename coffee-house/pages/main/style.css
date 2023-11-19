@@ -174,7 +174,7 @@ a {
 }
 
 .hover-transition:before {
-	content: url('../../assets/header/coffee-cup.png');
+	content: url('../../assets/header/coffee-cup.svg');
 	position: absolute;
 	left: 130px;
 	transition: ease 0.5s;
