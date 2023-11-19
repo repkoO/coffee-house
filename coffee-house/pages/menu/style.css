@@ -191,6 +191,32 @@ a {
   border-radius: 20px;
 }
 
+.menu__container-buttons span {
+  color: var(--main-text-color);
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* Desktop/Action/link & button */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+
+.main__style:hover {
+  background-color: #665F55;
+  transition: ease 0.5s;
+}
+
+.main__style:hover img {
+  background-color: #C1B6AD;
+  transition: ease 0.5s;
+}
+
+.menu__container-buttons-tea:hover span,
+.menu__container-buttons-desert:hover span {
+  color: #C1B6AD;
+}
+
 .active {
   pointer-events: none;
   background-color: #665F55;
@@ -203,16 +229,7 @@ background-color: #E1D4C9;
   background-color: transparent;
 }
 
-.menu__container-buttons span {
-  color: var(--main-text-color);
-  font-feature-settings: 'clig' off, 'liga' off;
-  /* Desktop/Action/link & button */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 24px */
-}
+
 
 /* ITEMS */
 
@@ -336,10 +353,6 @@ border-radius: 40px;
   transition: ease 1s;
 }
 
-.footer__links  button:hover svg path {
-  fill: #403F3D;
-}
-
 .footer__contact {
   display: flex;
   flex-direction: column;
@@ -400,4 +413,9 @@ border-radius: 40px;
 .hover-animation-footer:hover::after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+
+.footer__links  button:hover svg path {
+  stroke: #403F3D;
 }
