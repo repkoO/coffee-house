@@ -337,7 +337,7 @@ border-radius: 40px;
 }
 
 .footer__links  button:hover svg path {
-  
+  fill: #403F3D;
 }
 
 .footer__contact {
