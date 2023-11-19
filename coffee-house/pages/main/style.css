@@ -157,6 +157,7 @@ a {
 }
 
 .enjoy__title a {
+  position: relative;
   color: var(--main-text-color);
   text-align: center;
   font-family: 'Inter';
@@ -170,6 +171,19 @@ a {
   border-style: none;
   cursor: pointer;
   background: #E1D4C9;
+}
+
+.hover-transition:before {
+	content: url('../../assets/header/coffee-cup.png');
+	position: absolute;
+	left: 130px;
+	transition: ease 0.5s;
+  opacity: 0;
+}
+
+.hover-transition:hover::before {
+  left: 130px;
+  opacity: 1;
 }
 
 /* FAVORITE */
@@ -307,7 +321,7 @@ grid-template-areas:
   'item1 item3'
   'item1 item4'
   'item2 item4';
-gap: 40px;
+  gap: 40px;
 }
 
 .item1 {
