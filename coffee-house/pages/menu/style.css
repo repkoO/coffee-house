@@ -26,6 +26,10 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 :root {
   --main-text-color: #403F3D;
@@ -100,6 +104,19 @@ body {
   bottom: -20%;
   left: 0;
   transform: scaleX(0);
+  background-color: var(--main-text-color);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.menu__disabled::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -20%;
+  left: 0;
+  transform: scaleX(1);
   background-color: var(--main-text-color);
   transform-origin: center;
   transition: transform 0.5s ease;
@@ -184,7 +201,6 @@ background-color: #E1D4C9;
 }
 .disabled {
   background-color: transparent;
-  ;
 }
 
 .menu__container-buttons span {
@@ -216,6 +232,10 @@ display: flex;
 flex-direction: column;
 border: 1px solid #C1B6AD;
 border-radius: 40px;
+}
+
+.menu__item:hover {
+  background-color: aquamarine;
 }
 
 .menu__item img {
@@ -308,6 +328,12 @@ border-radius: 40px;
   border: 1px solid #C1B6AD;
   background: transparent;
   margin-right: 8px;
+  cursor: pointer;
+}
+
+.footer__links  button:hover {
+  background-color: #E1D4C9;
+  transition: ease 1s;
 }
 
 .footer__contact {
@@ -333,6 +359,7 @@ border-radius: 40px;
   row-gap: 16px;
 }
 
+.footer__contact-links a,
 .footer__contact-links span {
   color: #E1D4C9;
   font-feature-settings: 'clig' off, 'liga' off;
@@ -346,4 +373,27 @@ border-radius: 40px;
 
 .footer__contact-links img {
   padding-right: 6px;
+}
+
+.hover-animation-footer {
+  position: relative;
+}
+
+.hover-animation-footer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -20%;
+  left: 0;
+  transform: scaleX(0);
+  background: #E1D4C9;
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+
+.hover-animation-footer:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
 }
