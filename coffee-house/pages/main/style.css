@@ -156,7 +156,7 @@ a {
   line-height: 150%;
 }
 
-.enjoy__title button {
+.enjoy__title a {
   color: var(--main-text-color);
   text-align: center;
   font-family: 'Inter';
@@ -372,7 +372,7 @@ gap: 40px;
   gap: 20px;
 }
 
-.mobile__buttons button {
+.mobile__buttons .mobile__buttons-button {
   display: flex;
   width: 200px;
   padding: 12px 20px;
