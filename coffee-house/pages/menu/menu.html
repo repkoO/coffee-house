@@ -37,19 +37,25 @@
   <main>
     <section class="menu">
       <div class="menu__container">
-        <h2>Behind each of our cups<br>hides an amazing surprise</h2>
+        <h2>Behind each of our cups<br>hides an <span class="italic">amazing surprise</span></h2>
         <div class="menu__container-buttons">
-          <button class="menu__container-buttons-coffee">
-            <img src="../../assets/menu/🫖 (2).png" alt="Coffee" class="img1">
+          <button class="menu__container-buttons-coffee flex-button active">
+            <div class="img__buttons coffee">
+              <img src="../../assets/menu/🫖 (2).png" alt="Coffee" class="img1">
+            </div>
             <span>Coffee</span>
           </button>
-          <button class="menu__container-buttons-tea">
-            <img src="../../assets/menu/🫖 (1).png" alt="Tea">
+          <button class="menu__container-buttons-tea flex-button disabled">
+            <div class="img__buttons">
+              <img src="../../assets/menu/🫖 (1).png" alt="Tea">
+            </div>
             <span>Tea</span>
           </button>
-          <button class="menu__container-buttons-desert">
-            <img src="../../assets/menu/🫖.png" alt="Desert">
-            <span>Desert</span>
+          <button class="menu__container-buttons-desert flex-button disabled">
+            <div class="img__buttons">
+              <img src="../../assets/menu/🫖.png" alt="Desert">
+            </div>
+            <span>Dessert</span>
           </button>
         </div>
       </div>
@@ -67,56 +73,70 @@
         <div class="menu__item">
           <img src="../../assets/menu/coffee-2.png" alt="Menu-Item">
           <div class="menu__item-inf">
-            <h3>Kahlua coffee</h3>
-            <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-            <h3>$7.00</h3>
+            <div class="menu__item-title">
+              <h3>Kahlua coffee</h3>
+              <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+            </div>
+            <h3 class="grow">$7.00</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-3.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Honey raf</h3>
             <p>Espresso with frothed milk, cream and aromatic honey</p>
+            </div>
             <h3>$5.50</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-4.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Ice cappuccino</h3>
             <p>Cappuccino with soft thick foam in summer version with ice</p>
+            </div>
             <h3>$5.00</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-5.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Espresso</h3>
             <p>Classic black coffee</p>
+            </div>
             <h3>$4.50</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-6.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Latte</h3>
             <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+            </div>
             <h3>$5.50</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-7.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Latte macchiato</h3>
             <p>Espresso with frothed milk and chocolate</p>
+          </div>
             <h3>$5.50</h3>
           </div>
         </div>
         <div class="menu__item">
           <img src="../../assets/menu/coffee-8.png" alt="Menu-Item">
           <div class="menu__item-inf">
+            <div class="menu__item-title">
             <h3>Coffee with cognac</h3>
             <p>Fragrant black coffee with cognac and whipped cream</p>
+          </div>
             <h3>$6.50</h3>
           </div>
         </div>
@@ -130,7 +150,7 @@
           <h2 class="heading__slogan">
             Sip, Savor, Smile.
           </h2>
-          <h2 class="heading__slogan-2">It’s coffee time!</h2>
+          <h2 class="heading__slogan-2 italic">It’s coffee time!</h2>
           <button>
             <img src="../../assets/contacts/twitter.png" alt="Twitter">
           </button>

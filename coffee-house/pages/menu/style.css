@@ -36,6 +36,12 @@ body {
   src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
 
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 /* FIX */
 
 /* HEADER */
@@ -43,7 +49,7 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  padding: 20px 40px 0 40px;
+  padding: 16px  40px 0 40px;
   justify-content: space-between;
 }
 
@@ -130,11 +136,55 @@ body {
   line-height: 125%; /* 75px */
 }
 
+.italic {
+  color: #B0907A;
+  font-style: italic;
+}
+
+.menu__container-buttons {
+  display: flex;
+  gap: 16px;
+}
+
 .menu__container-buttons button {
   padding: 8px 16px 8px 8px;
   gap: 8px;
   border-radius: 100px;
-  background: transparent;
+  border-style: none;
+    border: 1px solid var(--border-light, #C1B6AD);
+    cursor: pointer;
+}
+
+.menu__container-buttons-coffee {
+  background-color: #665F55;
+}
+
+.flex-button {
+  display: flex;
+  align-items: center;
+}
+
+.img__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C1B6AD;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.active {
+  pointer-events: none;
+  background-color: #665F55;
+}
+
+.coffee {
+background-color: #E1D4C9;
+}
+.disabled {
+  background-color: transparent;
+  ;
 }
 
 .menu__container-buttons span {
@@ -186,11 +236,18 @@ border-radius: 40px;
 .menu__item-inf {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content: space-between;
   margin: 18px 20px 20px 20px;
-  flex: 1 0 0;
+  gap: 12px;
+  flex-grow: 1;
 }
+
+.menu__item-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 
 .menu__item-inf p {
   color: #403F3D;
