@@ -255,6 +255,23 @@ background-color: #E1D4C9;
   border-radius: 40px;
 }
 
+.img__container {
+  width: 309px;
+  height: 309px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.img__item {
+  margin-top: -19px;
+  margin-left: -16px;
+}
+
+.menu__item:hover img {
+  transform: scale(0.92);
+  transition: ease 0.5s;
+}
+
 .menu__item img {
   border-radius: 40px;
 }
