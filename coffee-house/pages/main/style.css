@@ -278,15 +278,18 @@ a {
   justify-content: center;
 }
 
-.slider__control button {
+.slider__control span {
   border-radius: 100px;
-  background: #665F55;
   width: 40px;
   height: 4px;
   border-style: none;
 }
 
-.slider__control button .grey {
+.active__slider {
+  background: #665F55
+}
+
+.disabled__slider {
   background: #C1B6AD;
 }
 
