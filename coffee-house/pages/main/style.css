@@ -633,3 +633,48 @@ grid-template-areas:
 }
 
 }
+
+@media screen and (max-width: 980px) {
+
+  /* Header + Burger */
+
+  .nav__hidden,
+  .header__menu {
+    display: none;
+  }
+
+  .menu__icon {
+    display: block;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #403F3D;
+    border-radius: 100px;
+  }
+
+  .menu__icon span,
+  .menu__icon::after {
+      position: absolute;
+      width: 16px;
+      height: 1.5px;
+      background-color: #403F3D;
+  }
+
+  .menu__icon::after {
+    content: '';
+    top: 26px;
+    left: 14px;
+  }
+
+  .menu__icon span {
+    top: 18px;
+    left: 14px;
+  }
+
+
+
+  }
+
+
