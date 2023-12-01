@@ -14,7 +14,7 @@
         <img src="../../assets/header/logo.png" width="100" alt="header logo" class="header__logo">
       </a>
       <nav class="header__nav">
-        <ul class="header__nav-ul__wrapper">
+        <ul class="header__nav-ul__wrapper nav__hidden">
           <li>
             <a href="#favorite" class="hover-animation">Favorite coffee</a>
           </li>
@@ -34,6 +34,9 @@
           Menu
         </a>
         <img src="../../assets/header/coffee-cup.svg" alt="coffee-cup" class="header__menu-logo">
+      </div>
+      <div class="menu__icon">
+        <span></span>
       </div>
     </div>
   </header>
@@ -59,10 +62,10 @@
           </button>
           <div class="slider">
             <div class="slider__item">
-              <img src="../../assets/favorite-coffee/57d082ae9774ffeb8a409a788e05fef3.png" width="480" alt="slider-item">
+              <img src="../../assets/favorite-coffee/57d082ae9774ffeb8a409a788e05fef3.png" alt="slider-item">
               <div class="slider__title">
                 <h3>S’mores Frappuccino</h3>
-                <p>This new drink takes an espresso and mixes it with brown<br> sugar and cinnamon before being topped with oat milk.</p>
+                <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                 <h3>$5.50</h3>
               </div>
             </div>
@@ -84,17 +87,21 @@
       <div class="about__container">
         <h2>Resource is <span class="italic">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
         <div class="about__items">
-          <div class="img__container item1">
-            <img src="../../assets/about/about-1.png" class="img__item1" alt="about-1">
+          <div class="items__column">
+            <div class="img__container item1">
+              <img src="../../assets/about/about-1.png" class="img__item1" alt="about-1">
+            </div>
+            <div class="img__container item2">
+              <img src="../../assets/about/about-2.png" class="img__item2" alt="about-3">
+            </div>
           </div>
-          <div class="img__container item2">
-            <img src="../../assets/about/about-2.png" class="img__item2" alt="about-3">
-          </div>
-          <div class="img__container item3">
-            <img src="../../assets/about/about-3.png" class="img__item3" alt="about-2">
-          </div>
-          <div class="img__container item4">
-            <img src="../../assets/about/about-4.png" class="img__item4" alt="about-4">
+          <div class="items__column">
+            <div class="img__container item3">
+              <img src="../../assets/about/about-3.png" class="img__item3" alt="about-2">
+            </div>
+            <div class="img__container item4">
+              <img src="../../assets/about/about-4.png" class="img__item4" alt="about-4">
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +136,7 @@
             </div>
           </div>
         </div>
-        <img src="../../assets/mob-app/mobile-screens.png" alt="Mobile">
+        <img class="mobile__title-img" src="../../assets/mob-app/mobile-screens.png" alt="Mobile">
       </div>
     </section>
   </main>
@@ -139,8 +146,8 @@
           <div class="footer__links">
             <h2 class="heading__slogan">
               Sip, Savor, Smile.
+            <span class="heading__slogan-2 italic">It’s coffee time!</span>
             </h2>
-            <h2 class="heading__slogan-2 italic">It’s coffee time!</h2>
             <button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
