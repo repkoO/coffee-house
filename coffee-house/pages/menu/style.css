@@ -127,6 +127,10 @@ a {
   transform-origin: center;
 }
 
+.menu__icon {
+  display: none;
+}
+
 /* MENU-CONTAINER */
 
 .menu {
@@ -142,6 +146,7 @@ a {
 }
 
 .menu__container h2 {
+  width: 800px;
   color: var(--main-text-color);
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
@@ -330,10 +335,11 @@ background-color: #E1D4C9;
 .footer__contacts {
   display: flex;
   padding: 100px;
-  gap: 135px;
+  gap: 100px;
 }
 
 .heading__slogan {
+  width: 530px;
   color: #E1D4C9;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Inter;
@@ -350,10 +356,9 @@ background-color: #E1D4C9;
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
-  margin-bottom: 40px;
 }
 
-.footer__links  button {
+.footer__links button {
   width: 60px;
   height: 60px;
   justify-content: center;
@@ -363,6 +368,7 @@ background-color: #E1D4C9;
   background: transparent;
   margin-right: 8px;
   cursor: pointer;
+  margin-top: 40px;
 }
 
 .footer__links  button:hover {
@@ -475,6 +481,10 @@ background-color: #E1D4C9;
     align-items: center;
   }
 
+  .menu__container h2 {
+    width: 688px;
+  }
+
   /*FOOTER */
   .footer__contacts {
     flex-direction: column;
@@ -486,7 +496,7 @@ background-color: #E1D4C9;
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
 
   /* Header + Burger */
 
@@ -524,6 +534,12 @@ background-color: #E1D4C9;
     top: 18px;
     left: 14px;
   }
+
+
+  .menu__item-gap {
+    margin-bottom: 25px;
+  }
+
 }
 
 /* MOBILE */
@@ -543,6 +559,7 @@ background-color: #E1D4C9;
 
   /* TOP */
   .menu__container h2 {
+    width: 348px;
     color: var(--text-dark, #403F3D);
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
@@ -574,6 +591,7 @@ background-color: #E1D4C9;
   }
 
   .heading__slogan {
+    width: 316px;
     color: var(--text-light, #E1D4C9);
     font-feature-settings: 'clig' off, 'liga' off;
     /* Mobile/Heading/heading-2 */
@@ -593,4 +611,11 @@ background-color: #E1D4C9;
     font-weight: 600;
     line-height: 125%; /* 40px */
   }
+
+
+  .menu__item-gap,
+  .menu__item-mobile {
+    margin-bottom: 25px;
+  }
+
 }

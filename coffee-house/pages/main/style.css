@@ -507,10 +507,11 @@ a {
 .footer__contacts {
   display: flex;
   padding: 100px;
-  gap: 135px;
+  gap: 100px;
 }
 
 .heading__slogan {
+  width: 530px;
   color: #E1D4C9;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Inter;
@@ -530,7 +531,7 @@ a {
   margin-bottom: 40px;
 }
 
-.footer__links  button {
+.footer__links button {
   width: 60px;
   height: 60px;
   justify-content: center;
@@ -539,6 +540,7 @@ a {
   border: 1px solid #C1B6AD;
   background: transparent;
   margin-right: 8px;
+  margin-top: 40px;
 }
 
 .footer__contact {
@@ -861,6 +863,7 @@ a {
   }
 
   .heading__slogan {
+    width: 316px;
     color: var(--text-light, #E1D4C9);
     font-feature-settings: 'clig' off, 'liga' off;
     /* Mobile/Heading/heading-2 */
@@ -876,9 +879,10 @@ a {
     /* Mobile/Heading/heading-2 */
     font-family: Inter;
     font-size: 32px;
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     line-height: 125%; /* 40px */
+    margin-bottom: 20px;
   }
 
 }
