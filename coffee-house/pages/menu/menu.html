@@ -13,7 +13,7 @@
       <a href="../main/index.html">
         <img src="../../assets/header/logo.png" width="100" alt="header logo" class="header__logo">
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav nav__hidden">
         <ul class="header__nav-ul__wrapper">
           <li>
             <a href="../main/index.html" class="hover-animation">Favorite coffee</a>
@@ -33,12 +33,15 @@
         <a href="#">Menu</a>
         <img src="../../assets/header/coffee-cup.svg" alt="coffee-cup" class="header__menu-logo">
       </div>
+      <div class="menu__icon">
+        <span></span>
+      </div>
     </div>
   </header>
   <main>
     <section class="menu">
       <div class="menu__container">
-        <h2>Behind each of our cups<br>hides an <span class="italic">amazing surprise</span></h2>
+        <h2>Behind each of our cups hides an <span class="italic">amazing surprise</span></h2>
         <div class="menu__container-buttons">
           <div class="menu__container-buttons-coffee main__style flex-button active">
             <div class="img__buttons coffee">
@@ -78,7 +81,7 @@
             <img src="../../assets/menu/coffee-2.jpg" class="img__item" alt="Menu-Item">
           </div>
           <div class="menu__item-inf">
-            <div class="menu__item-title">
+            <div class="menu__item-title menu__item-mobile">
               <h3>Kahlua coffee</h3>
               <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
             </div>
@@ -90,7 +93,7 @@
             <img src="../../assets/menu/coffee-3.png" class="img__item" alt="Menu-Item">
           </div>
           <div class="menu__item-inf">
-            <div class="menu__item-title">
+            <div class="menu__item-title  menu__item-gap">
             <h3>Honey raf</h3>
             <p>Espresso with frothed milk, cream and aromatic honey</p>
             </div>
@@ -102,14 +105,14 @@
             <img src="../../assets/menu/coffee-4.png" class="img__item" alt="Menu-Item">
           </div>
           <div class="menu__item-inf">
-            <div class="menu__item-title">
+            <div class="menu__item-title menu__item-gap">
             <h3>Ice cappuccino</h3>
             <p>Cappuccino with soft thick foam in summer version with ice</p>
             </div>
             <h3>$5.00</h3>
           </div>
         </div>
-        <div class="menu__item">
+        <div class="menu__item item__none">
           <div class="img__container">
             <img src="../../assets/menu/coffee-5.png" class="img__item" alt="Menu-Item">
           </div>
@@ -121,7 +124,7 @@
             <h3>$4.50</h3>
           </div>
         </div>
-        <div class="menu__item">
+        <div class="menu__item item__none">
           <div class="img__container">
             <img src="../../assets/menu/coffee-6.png" class="img__item" alt="Menu-Item">
           </div>
@@ -133,7 +136,7 @@
             <h3>$5.50</h3>
           </div>
         </div>
-        <div class="menu__item">
+        <div class="menu__item item__none">
           <div class="img__container">
             <img src="../../assets/menu/coffee-7.png" class="img__item" alt="Menu-Item">
           </div>
@@ -145,7 +148,7 @@
             <h3>$5.50</h3>
           </div>
         </div>
-        <div class="menu__item">
+        <div class="menu__item item__none">
           <div class="img__container">
             <img src="../../assets/menu/coffee-8.png" class="img__item" alt="Menu-Item">
           </div>
@@ -158,6 +161,12 @@
           </div>
         </div>
       </div>
+      <div class="refresh__button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -166,8 +175,8 @@
         <div class="footer__links">
           <h2 class="heading__slogan">
             Sip, Savor, Smile.
+          <span class="heading__slogan-2 italic">It’s coffee time!</span>
           </h2>
-          <h2 class="heading__slogan-2 italic">It’s coffee time!</h2>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
