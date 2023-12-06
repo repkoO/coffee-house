@@ -1,3 +1,4 @@
+//BURGER
 const burgerIcon = document.querySelector('.menu__icon');
 const navMenu = document.querySelector('.nav__hidden')
 burgerIcon.addEventListener('click', () => {
@@ -7,7 +8,7 @@ burgerIcon.addEventListener('click', () => {
 })
 
 document.addEventListener('click', (e) => {
-    if (e.target !== (navMenu && burgerMenu)) {
+    if (e.target !== (navMenu && burgerIcon)) {
         navMenu.classList.remove('_active');
         burgerIcon.classList.remove('_active');
     }
@@ -18,3 +19,51 @@ navMenu.addEventListener('click', () => {
     burgerIcon.classList.remove('_active');
     document.body.classList.remove('overflow')
 })
+
+//slider
+
+const sliderItem = document.querySelector('.slider__wrapper');
+const sliderList = document.querySelectorAll('.slider__item');
+const prevButton = document.querySelector('.slider__button-left');
+const nextButton = document.querySelector('.slider__button-right');
+const sliderIndicator = document.querySelectorAll('.slider__button');
+
+console.log(sliderList)
+
+let position = 0;
+let sliderIndex = 0;
+
+const nextSlide = () => {
+    if (document.documentElement.clientWidth >= 768) {
+        if (position < (sliderList.length - 1) * 480) {
+            position += 480;
+        } else {
+            position = 0
+        }
+        sliderItem.style.left = -position + 'px';
+    } else if (document.documentElement.clientWidth < 767) {
+        if (position < (sliderList.length - 1) * 348) {
+            position += 348;
+        } else {
+            position = 0
+        }
+        sliderItem.style.left = -position + 'px';
+    }
+}
+
+const prevSlide = () => {
+    if (position > 0) {
+        position -= 480;
+    } else {
+        position += (sliderList.length - 1) * 480
+    }
+    sliderItem.style.left = -position + 'px';
+}
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+setInterval(() => {
+    nextSlide()
+}, 5000)
+
