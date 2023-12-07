@@ -156,6 +156,10 @@ a {
   margin: 0 40px;
 }
 
+.container__img {
+  border-radius: 40px;
+}
+
 .enjoy__title {
   width: 530px;
   position: absolute;
