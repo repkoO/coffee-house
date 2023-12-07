@@ -317,13 +317,20 @@ a {
   border-style: none;
 }
 
-.active__slider {
-  background: #665F55
+.slider__progress {
+  width: 40px;
 }
 
-.disabled__slider {
+.active__slider {
   background: #C1B6AD;
 }
+
+.progress__slider {
+  width: 0%;
+  height: 100%;
+  background: #665F55;
+}
+
 
 .slider__button-left:hover,
 .slider__button-right:hover {
