@@ -275,6 +275,16 @@ background-color: #E1D4C9;
   margin-left: 40px;
   grid-template-columns: 310px 310px 310px 310px;
   gap: 40px;
+  animation: cardOpen 2s;
+}
+
+@keyframes cardOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .menu__item {
