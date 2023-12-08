@@ -251,7 +251,6 @@ color: #E1D4C9;
 }
 
 .active {
-  pointer-events: none;
   background-color: #665F55;
 }
 

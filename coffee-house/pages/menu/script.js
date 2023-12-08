@@ -9,7 +9,7 @@ burgerIcon.addEventListener('click', () => {
 })
 
 document.addEventListener('click', (e) => {
-    if (e.target !== (navMenu && burgerMenu)) {
+    if (e.target !== (navMenu && burgerIcon)) {
         navMenu.classList.remove('_active');
         burgerIcon.classList.remove('_active');
     }
@@ -66,7 +66,6 @@ teaButton.addEventListener('mousedown', (event) => {
         api.getData()
         .then(res => res.json())
         .then(data => data.forEach((product, id) => {
-            console.log(product)
             if (product.category === 'tea') {
                 cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
             }
