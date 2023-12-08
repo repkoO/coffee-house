@@ -24,7 +24,10 @@ navMenu.addEventListener('click', () => {
 //Data from json
 
 const cardWrapper = document.querySelector('.menus__container');
-const cardItem = document.querySelectorAll('.menu__item');
+const coffeeButton = document.querySelector('.menu__container-buttons-coffee');
+const teaButton = document.querySelector('.menu__container-buttons-tea');
+const desertButton = document.querySelector('.menu__container-buttons-desert');
+
 const api = new Api()
 
 const generatingCard = (product, id) => `<div class="menu__item" data-card_category=${product.category} data-card_id=${id + 1} >
@@ -45,5 +48,27 @@ api.getData()
         if (product.category === 'coffee') {
             cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
         }
-
     }))
+
+coffeeButton.addEventListener('click', (event) => {
+        cardWrapper.innerHTML = '';
+            api.getData()
+            .then(res => res.json())
+            .then(data => data.forEach((product, id) => {
+                if (product.category === 'coffee') {
+                    cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
+                }
+            }))
+        })
+
+teaButton.addEventListener('mousedown', (event) => {
+        cardWrapper.innerHTML = '';
+        api.getData()
+        .then(res => res.json())
+        .then(data => data.forEach((product, id) => {
+            console.log(product)
+            if (product.category === 'tea') {
+                cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
+            }
+        }))
+    })
