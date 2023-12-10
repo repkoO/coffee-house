@@ -50,7 +50,7 @@ api.getData()
         }
     }))
 
-coffeeButton.addEventListener('click', (event) => {
+coffeeButton.addEventListener('click', () => {
         cardWrapper.innerHTML = '';
             api.getData()
             .then(res => res.json())
@@ -59,9 +59,10 @@ coffeeButton.addEventListener('click', (event) => {
                     cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
                 }
             }))
+            coffeeButton.style.backgroundColor === 'transparent' ? coffeeButton.style.backgroundColor = '#665F55' : coffeeButton.style.backgroundColor === 'transparent'
         })
 
-teaButton.addEventListener('mousedown', (event) => {
+teaButton.addEventListener('click', () => {
         cardWrapper.innerHTML = '';
         api.getData()
         .then(res => res.json())
@@ -70,4 +71,31 @@ teaButton.addEventListener('mousedown', (event) => {
                 cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
             }
         }))
+        if (coffeeButton.style.backgroundColor === '#665F55' || desertButton.style.backgroundColor === '#665F55') {
+            coffeeButton.style.backgroundColor = 'transparent';
+            desertButton.style.backgroundColor = 'transparent';
+        }
+        coffeeButton.children[1].style.color = '#403F3D';
+        teaButton.style.backgroundColor = '#665F55';
+        console.log(coffeeButton.style.backgroundColor = 'transparent')
     })
+
+desertButton.addEventListener('click', () => {
+    cardWrapper.innerHTML = '';
+    api.getData()
+    .then(res => res.json())
+    .then(data => data.forEach((product, id) => {
+        if (product.category === 'dessert') {
+            cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
+        };
+        if (teaButton.style.backgroundColor === 'transparent' || coffeeButton.style.backgroundColor === 'transparent') {
+            desertButton.style.backgroundColor = '#665F55';
+            coffeeButton.style.backgroundColor = 'transparent';
+        }
+        teaButton.style.backgroundColor = 'transparent';
+        teaButton.children[1].style.color = '#403F3D';
+        coffeeButton.children[1].style.color = '#403F3D';
+    }))
+})
+
+//Modal Window

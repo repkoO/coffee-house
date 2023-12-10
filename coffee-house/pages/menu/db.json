@@ -435,7 +435,7 @@
     "name": "Marble cheesecake",
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
     "price": "3.50",
-    "img": "../../assets/menu/desert-1.png",
+    "img": "../../assets/menu/dessert-1.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -471,7 +471,7 @@
     "name": "Red velvet",
     "description": "Layer cake with cream cheese frosting",
     "price": "4.00",
-    "img": "../../assets/menu/desert-2.png",
+    "img": "../../assets/menu/dessert-2.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -507,7 +507,7 @@
     "name": "Cheesecakes",
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
     "price": "4.50",
-    "img": "../../assets/menu/desert-3.png",
+    "img": "../../assets/menu/dessert-3.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -543,7 +543,7 @@
     "name": "Creme brulee",
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
     "price": "4.00",
-    "img": "../../assets/menu/desert-4.png",
+    "img": "../../assets/menu/dessert-4.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -579,7 +579,7 @@
     "name": "Pancakes",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
     "price": "4.50",
-    "img": "../../assets/menu/desert-5.png",
+    "img": "../../assets/menu/dessert-5.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -614,7 +614,7 @@
     "name": "Honey cake",
     "description": "Classic honey cake with delicate custard",
     "price": "4.50",
-    "img": "../../assets/menu/desert-6.png",
+    "img": "../../assets/menu/dessert-6.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -649,7 +649,7 @@
     "name": "Chocolate cake",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
     "price": "5.50",
-    "img": "../../assets/menu/desert-7.png",
+    "img": "../../assets/menu/dessert-7.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -684,7 +684,7 @@
     "name": "Black forest",
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
     "price": "6.50",
-    "img": "../../assets/menu/desert-8.png",
+    "img": "../../assets/menu/dessert-8.png",
     "category": "dessert",
     "sizes": {
       "s": {
