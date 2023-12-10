@@ -116,7 +116,7 @@ const generateModalWindow = (product) =>`<div class="modal__container">
     <div class="modal__size">
       <p>Size</p>
       <div class="modal__size-buttons">
-        <div class="modal__size-button">
+        <div class="modal__size-button active">
           <div class="modal__size-title"><p>S</p></div>
           <div class="modal__size-ml"><span>${product.sizes.s.size}</span></div>
         </div>
