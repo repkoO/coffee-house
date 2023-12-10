@@ -490,17 +490,36 @@ background-color: #E1D4C9;
   width: 100%;
   height: 100%;
   background-color: rgba(64, 63, 61, 0.80);
+  z-index: 1;
+  display: none;
+  animation: modalOpen 0.5s;
 }
 
 .modal__wrapper {
-  /* display: none; */
-  position: absolute;
-  left: 30%;
-  top: 30%;
-  margin-left: -100px;
-  margin-top: -75px;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  align-items: center;
+  margin: 0 auto;
   overflow: auto; /* Enable scroll if needed */
   width: 806px;
+  animation: modalOpen 0.2s;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden__wrapper {
+  display: none;
 }
 
 .modal__container {
@@ -715,8 +734,6 @@ font-feature-settings: 'clig' off, 'liga' off;
 .modal__total p {
   color: var(--text-dark, #403F3D);
   font-feature-settings: 'clig' off, 'liga' off;
-
-  /* Desktop/Heading/heading-3 */
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
