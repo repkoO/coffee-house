@@ -55,7 +55,7 @@ const itemWidth = () => {
   })
   loadButton.addEventListener('click', () => {
     for (let i = 4; i < menuItemList.length; i++) {
-      menuItemList[i].classList.remove('product__hidden')
+      menuItemList[i].classList.toggle('product__hidden')
     }
   })
 }
@@ -172,7 +172,7 @@ const generateModalWindow = (product) =>`<div class="modal__container">
     </div>
     <div class="modal__total">
       <p>Total:</p>
-      <p>$${product.price}</p>
+      <p class="modal__price">$${product.price}</p>
     </div>
     <div class="modal__alert">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -235,6 +235,26 @@ document.addEventListener("keydown", (e) => { //закрытие форм на E
 
 //Взаимодействие с модалкой
 
-wrapperModals.addEventListener('click', () => {
-  console.log(wrapperModals.closest('.modal__container'))
+wrapperModals.addEventListener('click', (event) => {
+  setTimeout(function() {
+    const modalTotalList = document.querySelectorAll('.modal__size-button');
+    let modalPrice = document.querySelector('.modal__price')
+    const cardId = Number(event.target.closest('.menu__item').dataset.card_id);
+    modalTotalList.forEach(el => {
+      el.addEventListener('click', (event) => {
+        if (event.target.closest('.modal__size-button').classList[0] !== 'active') {
+          el.classList.toggle('active')
+        }
+        let setValue = modalPrice.textContent.replace('$','');
+        api.getData()
+          .then(res => res.json())
+          .then(data => data.filter((element, index) => {
+            if (cardId === index + 1) {
+            modalPrice.innerText = '';
+            modalPrice.innerText = `$${+setValue + +element.sizes.m['add-price']}`
+          }
+          }))
+      })
+    })
+  }, 1000)
 })
