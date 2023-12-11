@@ -39,7 +39,26 @@ const generatingCard = (product, id) => `<div class="menu__item" data-card_categ
   <p>${product.description}</p>
   <h3>${product.price}$</h3>
 </div>
-</div>`; //функция генерации карточек на страницу
+</div>`; //функция генерации карточек на страница
+
+//функция количества карточек в зависимости от ширины экрана
+
+const itemWidth = () => {
+  const menuItemList = document.querySelectorAll('.menu__item')
+  const loadButton = document.querySelector('.refresh__button')
+  window.addEventListener('resize', () => {
+    if (document.documentElement.clientWidth < 1439) {
+      for (let i = 4; i < menuItemList.length; i++) {
+        menuItemList[i].classList.add('product__hidden')
+      }
+    }
+  })
+  loadButton.addEventListener('click', () => {
+    for (let i = 4; i < menuItemList.length; i++) {
+      menuItemList[i].classList.remove('product__hidden')
+    }
+  })
+}
 
 
 api.getData()
@@ -48,6 +67,7 @@ api.getData()
         if (product.category === 'coffee') {
             cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
         }
+        itemWidth()
     }))
 
 coffeeButton.addEventListener('click', () => {
@@ -58,8 +78,11 @@ coffeeButton.addEventListener('click', () => {
                 if (product.category === 'coffee') {
                     cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
                 }
+                itemWidth()
             }))
-            coffeeButton.style.backgroundColor === 'transparent' ? coffeeButton.style.backgroundColor = '#665F55' : coffeeButton.style.backgroundColor === 'transparent'
+            teaButton.classList.remove('active');
+            coffeeButton.classList.add('active');
+            desertButton.classList.remove('active');
         })
 
 teaButton.addEventListener('click', () => {
@@ -71,13 +94,9 @@ teaButton.addEventListener('click', () => {
                 cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
             }
         }))
-        if (coffeeButton.style.backgroundColor === '#665F55' || desertButton.style.backgroundColor === '#665F55') {
-            coffeeButton.style.backgroundColor = 'transparent';
-            desertButton.style.backgroundColor = 'transparent';
-        }
-        coffeeButton.children[1].style.color = '#403F3D';
-        teaButton.style.backgroundColor = '#665F55';
-
+        teaButton.classList.add('active');
+        coffeeButton.classList.remove('active');
+        desertButton.classList.remove('active');
     })
 
 desertButton.addEventListener('click', () => {
@@ -87,14 +106,11 @@ desertButton.addEventListener('click', () => {
     .then(data => data.forEach((product, id) => {
         if (product.category === 'dessert') {
             cardWrapper.insertAdjacentHTML('beforeend', generatingCard(product, id))
+            itemWidth()
         };
-        if (teaButton.style.backgroundColor === 'transparent' || coffeeButton.style.backgroundColor === 'transparent') {
-            desertButton.style.backgroundColor = '#665F55';
-            coffeeButton.style.backgroundColor = 'transparent';
-        }
-        teaButton.style.backgroundColor = 'transparent';
-        teaButton.children[1].style.color = '#403F3D';
-        coffeeButton.children[1].style.color = '#403F3D';
+        teaButton.classList.remove('active');
+        coffeeButton.classList.remove('active');
+        desertButton.classList.add('active');
     }))
 })
 
@@ -103,6 +119,7 @@ desertButton.addEventListener('click', () => {
 const wrapperModals = document.querySelector('.menus__container');
 const fixedOverlay = document.querySelector('.fixed__overlay');
 const modalWrapper = document.querySelector('.modal__wrapper')
+
 
 const generateModalWindow = (product) =>`<div class="modal__container">
   <div class="modal__img">
@@ -192,26 +209,32 @@ wrapperModals.addEventListener('click', (event) => {
         }))
 })
 
+
 document.body.addEventListener('click', (event) => {
-    event.stopImmediatePropagation()
-    const closeElement = event.target;
-    if (closeElement.classList[0] === 'modal__close' || closeElement.classList[0] === 'close__button') {
-        fixedOverlay.style.display = 'none';
-        document.body.classList.remove('overflow')
-        modalWrapper.innerHTML = ''
-    };
-    if (event.target.classList[0] === 'fixed__overlay' || event.target.classList[0] === 'modal__wrapper') {
-        fixedOverlay.style.display = 'none';
-        document.body.classList.remove('overflow')
-        modalWrapper.innerHTML = ''
-    };
-    console.log(event.target)
+  event.stopImmediatePropagation()
+  const closeElement = event.target;
+  if (closeElement.classList[0] === 'modal__close' || closeElement.classList[0] === 'close__button') {
+      fixedOverlay.style.display = 'none';
+      document.body.classList.remove('overflow')
+      modalWrapper.innerHTML = ''
+  };
+  if (event.target.classList[0] === 'fixed__overlay' || event.target.classList[0] === 'modal__wrapper') {
+      fixedOverlay.style.display = 'none';
+      document.body.classList.remove('overflow')
+      modalWrapper.innerHTML = ''
+  };
 })
 
 document.addEventListener("keydown", (e) => { //закрытие форм на Esc
-    if (e.key === "Escape") {
-        fixedOverlay.style.display = 'none';
-        document.body.classList.remove('overflow')
-        modalWrapper.innerHTML = ''
-    }
-  });
+  if (e.key === "Escape") {
+      fixedOverlay.style.display = 'none';
+      document.body.classList.remove('overflow')
+      modalWrapper.innerHTML = ''
+  }
+});
+
+//Взаимодействие с модалкой
+
+wrapperModals.addEventListener('click', () => {
+  console.log(wrapperModals.closest('.modal__container'))
+})

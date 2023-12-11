@@ -924,7 +924,23 @@ font-feature-settings: 'clig' off, 'liga' off;
     top: 50%;
     transform: rotate(45deg) translate(0px, -50%);
   }
+/*Modal */
 
+  .modal__wrapper {
+    width: 688px;
+  }
+
+  .modal__description {
+    width: 346px;
+  }
+
+  .modal__size-buttons {
+    flex-wrap: wrap;
+  }
+
+  .modal__addiv-container {
+    flex-wrap: wrap;
+  }
 
 }
 
@@ -1002,6 +1018,24 @@ font-feature-settings: 'clig' off, 'liga' off;
   .menu__item-gap,
   .menu__item-mobile {
     margin-bottom: 25px;
+  }
+
+  /*Modal */
+
+  .modal__img {
+    display: none;
+  }
+
+  .menu__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C1B6AD;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  .product__hidden {
+    display: none;
   }
 
 }
